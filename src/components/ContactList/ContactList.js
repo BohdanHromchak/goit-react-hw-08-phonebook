@@ -10,7 +10,7 @@ import {
   fetchContacts,
   deleteContacts,
 } from '../../redux/contacts/contactsOperations';
-import { Grid, Paper, ListItemIcon, Button } from '@mui/material';
+import { Grid, Paper, Button } from '@mui/material';
 import ContactsIcon from '@mui/icons-material/Contacts';
 
 export const ContactList = () => {
