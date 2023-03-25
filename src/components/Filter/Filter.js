@@ -1,6 +1,7 @@
 import css from "./Filter.module.css";
 import {  useDispatch } from "react-redux";
 import { filterContacts } from "../../redux/filter/filterSlice";
+import { Input, Container } from '@mui/material';
 
 
 export const Filter = () => {
@@ -11,15 +12,13 @@ export const Filter = () => {
 
 
   return (
-    <label className={css.label}>
-      Find contacts by name
-      <input
-        className={css.input}
-        type="text"
-        name="filter"
-        onChange={handleFilterChange}
-      />
-    </label>
+    <Container sx={{display: 'flex', justifyContent: 'center', mb: '1rem'}}>
+       <Input placeholder="Find contacts by name"
+       className={css.input}
+       type="text"
+       name="filter"
+       onChange={handleFilterChange}/>
+</Container>
   );
 };
 

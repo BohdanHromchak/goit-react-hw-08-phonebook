@@ -1,10 +1,13 @@
-import css from './Layout.module.css'
 import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import { Navigation } from 'components/Navigation/Navigation';
 
+
 export const Layout = () => {
-    return <div className={css.container}>
+    return <>
       <Navigation/>
+      <Suspense fallback={null}>
       <Outlet />
-    </div>;
+      </Suspense>
+    </>;
   };
