@@ -6,7 +6,7 @@ import {
 } from "../../redux/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchContacts, deleteContacts } from "../../redux/operations";
+import { fetchContacts, deleteContacts } from "../../redux/contacts/contactsOperations";
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -16,15 +16,16 @@ export const ContactList = () => {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
+
   const contacts = useSelector(selectFilterQuery);
 
   return (
     <>
       {isLoading && !error && <b>Request in progress...</b>}
       <ul className={css.list}>
-        {contacts.map(({ id, name, phone }) => (
+        {contacts.map(({ id, name, number }) => (
           <li key={id} className={css.item}>
-            {name}: {phone}
+            {name}: {number}
             <button
               onClick={() => dispatch(deleteContacts(id))}
               className={css.button}
