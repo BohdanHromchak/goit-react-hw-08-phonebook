@@ -7,6 +7,7 @@ import { selectIsRefreshing } from 'redux/selectors';
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, lazy } from 'react';
 
+
 const Home = lazy(() => import('./Home/Home'));
 const Register = lazy(() => import('./Register/Register'));
 const Login = lazy(() => import('./Login/Login'));

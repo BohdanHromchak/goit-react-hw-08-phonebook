@@ -1,4 +1,3 @@
-import css from './ContactList.module.css';
 import {
   selectIsLoading,
   selectError,
@@ -41,7 +40,7 @@ export const ContactList = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              width: 1 / 2,
+              width: 500,
             }}
           >
             <ContactsIcon />
@@ -49,7 +48,7 @@ export const ContactList = () => {
             <span>{number}</span>
             <Button
               onClick={() => dispatch(deleteContacts(id))}
-              className={css.button}
+             
             >
               Delete
             </Button>

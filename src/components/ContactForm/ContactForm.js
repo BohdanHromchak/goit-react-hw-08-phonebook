@@ -23,11 +23,12 @@ console.log('ok')
           justifyContent: 'center',
           alignItems: 'center',
           gap: '1rem',
-          mb: '2rem'
+          mb: '2rem',
+          
         }}
       >
         <TextField
-        sx={{ width: 1 / 2}}
+        sx={{width: 400}}
           id="filled-basic"
           label="Name"
           variant="filled"
@@ -39,7 +40,7 @@ console.log('ok')
         />
 
         <TextField
-         sx={{ width: 1 / 2}}
+         sx={{width: 400}}
           id="filled-basic"
           label="Number"
           variant="filled"
@@ -50,7 +51,7 @@ console.log('ok')
           required
         />
 
-        <Button variant="outlined" sx={{fontWeight: 700,  width: 1 / 2}} type="submit">Add contact</Button>
+        <Button variant="outlined" sx={{fontWeight: 700,  width: 150}} type="submit">Add contact</Button>
       </Container>
     </form>
   );

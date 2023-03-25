@@ -24,8 +24,7 @@ const Login = () => {
           maxWidth: 'sm',
           display: 'flex',
           flexDirection: 'column',
-          gap: '1rem',
-          width: '200',
+          gap: '1rem', width: 400
         }}
       >
         <TextField
